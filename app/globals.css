@@ -16,3 +16,6 @@
 .secTitle {
     @apply w-220 mt-[3rem] text-[3rem] font-semibold text-secondary;
 }
+nav li {
+    @apply hover:underline hover:text-secondary hover:italic ;
+}
