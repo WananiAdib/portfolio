@@ -9,6 +9,38 @@ import darettibaaLogo from "../public/darettibaa logo.png";
 import nyush from "../public/NYU_Shanghai_Logo.jpg";
 
 const Home = () => {
+  const technicalSkills = [
+    "Python",
+    "TailwindCSS",
+    "AWS",
+    "Docker",
+    "CI/CD",
+    "NextJS",
+    "C/C++",
+    "JavaScript",
+    "MongoDB",
+    "MySQL",
+    "Pandas",
+    "React",
+    "Express",
+    "Node.js",
+    "OpenGL",
+    "PyTorch",
+    "Django",
+    "AWS",
+    "Firebase",
+    "Figma",
+    "WordPress",
+    "Vim",
+    "Solidity",
+    "Typescript",
+    "React",
+    "HardhatJS",
+    "MERN Stack",
+    "Material UI",
+    "Passport",
+  ];
+  
 	return (
 		<div className="flex items-center justify-center flex-col">
 			<nav className="bg-primary w-220 rounded-[3.2rem] text-white my-[1rem]">
@@ -84,7 +116,7 @@ const Home = () => {
 					let's create something amazing together. 💡🔧
 				</p>
 			</div>
-			<h2 className="secTitle">Projects</h2>
+			<h2 className="secTitle" id="Projects">Projects</h2>
 			<div className="bg-primary mt-[1rem] w-220 rounded-[3.2rem] flex">
 				<div className="p-[2rem]">
 					<Image
@@ -109,7 +141,7 @@ const Home = () => {
 					</p>
 				</div>
 			</div>
-			<h2 className="secTitle">Education</h2>
+			<h2 className="secTitle" id="Education">Education</h2>
 			<div className="bg-primary mt-[1rem] w-220 rounded-[3.2rem] flex">
 				<div className="p-[2rem]">
 					<Image
@@ -133,7 +165,7 @@ const Home = () => {
 					</p>
 				</div>
 			</div>
-			<h2 className="secTitle">Experiences</h2>
+			<h2 className="secTitle" id="Experiences">Experiences</h2>
 			<div className="bg-primary w-220 rounded-[3.2rem] text-white px-[3rem] py-[1rem]">
 				<h3 className="text-[3rem] font-semibold">HumanID</h3>
 				<div className="flex justify-between items-center ">
@@ -171,7 +203,20 @@ const Home = () => {
 				</p>
 			</div>
 			<h2 className="secTitle">Certifications</h2>
+      <div className="bg-primary rounded-[3.2rem] w-220 px-[3rem] py-[2rem] text-white">
+        <div className="flex justify-between items-center">
+          <h3 className="font-semibold text-[2rem]">DevOps on AWS Specialization</h3>
+          <p>Oct '23</p>
+        </div>
+        <p className="text-[1.2rem]">Coursera</p>
+      </div>
 			<h2 className="secTitle">Skills</h2>
+      <div className="w-220 flex flex-wrap">
+        {technicalSkills.map((skill) => (
+          <span className="skill">{skill}</span>
+        ))}
+
+      </div>
 			<h2 className="secTitle" id="Contact">
 				Contact
 			</h2>
