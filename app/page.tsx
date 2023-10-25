@@ -8,8 +8,8 @@ import githubLogo from '../public/github.svg'
 
 const Home = () => {
 	return (
-		<div className="flex items-center justify-center h-screen">
-			<div className="relative bg-primary text-white p-4 w-[55rem] h-[45rem] shrink-0 rounded-[3.2rem]">
+		<div className="flex items-center justify-center flex-col">
+			<div className="relative bg-primary text-white p-4 w-220 h-[45rem] shrink-0 rounded-[3.2rem]">
 				<h1 className="absolute text-[7.56rem] leading-[138%] font-arabic font-bold text-secondary top-[3.20rem] right-[3.7rem] text-right">
 					أديب <br />الوناني
 				</h1>
@@ -27,8 +27,12 @@ const Home = () => {
         <a className="absolute flex items-center justify-center  left-1/2 w-[17.3rem] h-[4.2rem] top-[39rem] bg-secondary transform rounded-[3.2rem] -translate-x-1/2 font-medium text-[1.75rem]" href="#contact" >
           Contact
         </a>
-
 			</div>
+      <h2 className="secTitle">About</h2>
+      <div className="bg-primary mt-[1rem] text-white w-220 rounded-[3.2rem] py-[2.6rem] px-[4rem] text-[1.6rem]">
+        <p>Software engineer and NYU Shanghai grad with a global perspective, blending UK, USA, and Chinese tech vibes. 🌎 Moroccan roots, code at heart. 🚀 From web apps to AI, I'm all about making ideas pop! Explore my digital world and let's create something amazing together. 💡🔧</p>
+      </div>
+      <h2 className="secTitle">Projects</h2>
 		</div>
 	);
 };

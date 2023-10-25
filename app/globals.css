@@ -9,3 +9,10 @@
 .text-shadow {
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.27);
 }
+.secTitle::before {
+    content: "# ";
+    @apply text-white font-light  ;
+}
+.secTitle {
+    @apply w-220 mt-[3rem] text-[3rem] font-semibold text-secondary;
+}
