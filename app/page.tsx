@@ -5,6 +5,8 @@ import free from '../public/Professional_Photo-removebg-preview.png'
 import Link from "next/link";
 import linkedinIcon from "../public/linkedin.svg";
 import githubLogo from '../public/github.svg'
+import darettibaaLogo from '../public/darettibaa logo.png'
+import nyush from '../public/NYU_Shanghai_Logo.jpg'
 
 const Home = () => {
 	return (
@@ -33,6 +35,38 @@ const Home = () => {
         <p>Software engineer and NYU Shanghai grad with a global perspective, blending UK, USA, and Chinese tech vibes. 🌎 Moroccan roots, code at heart. 🚀 From web apps to AI, I'm all about making ideas pop! Explore my digital world and let's create something amazing together. 💡🔧</p>
       </div>
       <h2 className="secTitle">Projects</h2>
+      <div className="bg-primary mt-[1rem] w-220 rounded-[3.2rem] flex" >
+        <div className="p-[2rem]">
+          <Image src={darettibaaLogo} alt="darettibaa logo" className="w-[12rem] rounded-[3.2rem]" />
+        </div>
+        <div className="pt-[2rem]">
+          <a href="https://darettibaa.com">
+            <h3 className="font-500 text-white text-[2.375rem] hover:underline">Darettibaa</h3>
+          </a>
+          <p className="text-white w-[32rem] pt-[0.4rem]">Darettibaa is a user-friendly web application designed to assist individuals in effortlessly typing in Arabic. With its intuitive interface and convenient features, users can seamlessly express themselves in the Arabic language, whether for personal communication or professional purposes.</p>
+        </div>
+      </div>
+        <h2 className="secTitle">Education</h2>
+        <div className="bg-primary mt-[1rem] w-220 rounded-[3.2rem] flex">
+          <div className="p-[2rem]">
+            <Image src={nyush} alt="nyu shanghai" className="w-[12rem] rounded-[3.2rem]" />
+          </div>
+          <div className="text-white pt-[2rem]">
+            <h3 className="text-[2rem] font-500">NYU Shanghai</h3>
+            <div className="flex justify-between items-center">
+              <h4 className="text-[1.6rem]">B.Sc in Computer Science</h4>
+              <p>Sep '19 - May '23</p>
+            </div>
+              <p className="w-[32rem] pt-[0.4rem]">
+                Study Away Semesters in London and New York (2x) <br />
+                Scholarship & Awards: NYU Pan-Asian Alumni Global Network Scholarship, Shanghai Scholarship U
+              </p>
+          </div>
+        </div>
+        <h2 className="secTitle">Experiences</h2>
+        <h2 className="secTitle">Certifications</h2>
+        <h2 className="secTitle">Skills</h2>
+        <h2 className="secTitle" id="contact">Contact</h2>
 		</div>
 	);
 };
