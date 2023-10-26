@@ -20,5 +20,5 @@ nav li {
     @apply hover:underline hover:text-secondary hover:italic ;
 }
 .skill {
-    @apply bg-primary rounded-[3.2rem] px-[1rem] py-[1rem] text-white mb-[1rem] mr-[1rem] text-[1.2rem] font-medium;
+    @apply bg-primary rounded-[3.2rem] px-[1rem] py-[1rem] text-white mb-[0.3rem] mr-[0.4rem] text-[1.2rem] font-medium;
 }

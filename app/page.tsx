@@ -42,7 +42,7 @@ const Home = () => {
   ];
   
 	return (
-		<div className="flex items-center justify-center flex-col">
+		<div className="flex items-center justify-center flex-col scroll-smooth">
 			<nav className="bg-primary w-220 rounded-[3.2rem] text-white my-[1rem]">
 				<ul className="flex justify-around text-[1.4rem] font-bol p-[1rem]">
 					<li>
@@ -220,6 +220,13 @@ const Home = () => {
 			<h2 className="secTitle" id="Contact">
 				Contact
 			</h2>
+      <div className="w-220 bg-primary text-white rounded-[3.2rem] px-[3rem] py-[2rem] text-[1.2rem]">
+        <p>Please contact me at <a className="underline" href="mailto:wananiadib@gmail.com">wananiadib@gmail.com</a></p>
+      </div>
+      <footer className="bg-primary text-white py-2 mt-12 w-full text-center">
+        <small className="text-white mb-4 block">&copy; Adib El Ounani 2023. All rights reserved.</small>
+        <p>Built with Nextjs and React. Hosted in Vercel. From 🇲🇦 with ❤️.</p>
+      </footer>
 		</div>
 	);
 };
