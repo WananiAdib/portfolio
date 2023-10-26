@@ -103,7 +103,7 @@ const Home = () => {
 					</a>
 					<a
 						className="absolute flex items-center justify-center  left-1/2 w-[17.3rem] h-[4.2rem] top-[39rem] bg-secondary transform rounded-[3.2rem] -translate-x-1/2 font-medium text-[1.75rem]"
-						href="#contact"
+						href="#Contact"
 					>
 						Contact
 					</a>
@@ -218,7 +218,7 @@ const Home = () => {
 						as a research paper.
 					</p>
 				</div>
-				<h2 className="secTitle">Certifications</h2>
+				<h2 className="secTitle" id="Certifications">Certifications</h2>
 				<div className="bg-primary rounded-[3.2rem] w-220 px-[3rem] py-[2rem] text-white">
 					<div className="flex justify-between items-center">
 						<h3 className="font-semibold text-[2rem]">
@@ -228,7 +228,7 @@ const Home = () => {
 					</div>
 					<p className="text-[1.2rem]">Coursera</p>
 				</div>
-				<h2 className="secTitle">Skills</h2>
+				<h2 className="secTitle" id="Skills">Skills</h2>
 				<div className="w-220 flex flex-wrap">
 					{technicalSkills.map((skill, index) => (
 						<span key={index} className="skill">
