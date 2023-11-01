@@ -7,6 +7,7 @@ import linkedinIcon from "../public/linkedin.svg";
 import githubLogo from "../public/github.svg";
 import darettibaaLogo from "../public/darettibaa logo.png";
 import nyush from "../public/NYU_Shanghai_Logo.jpg";
+import Navbar from "./components/Navbar";
 
 const Home = () => {
 	const technicalSkills = [
@@ -47,31 +48,7 @@ const Home = () => {
 				<title>Adib El Ounani</title>
 			</Head>
 			<div className="flex items-center justify-center flex-col scroll-smooth">
-				<nav className="bg-primary w-220 rounded-[3.2rem] text-white my-[1rem]">
-					<ul className="flex justify-around text-[1.4rem] font-bol p-[1rem]">
-						<li>
-							<a href="#About">About</a>
-						</li>
-						<li>
-							<a href="#Education">Education</a>
-						</li>
-						<li>
-							<a href="#Projects">Projects</a>
-						</li>
-						<li>
-							<a href="#Experiences">Experiences</a>
-						</li>
-						<li>
-							<a href="#Certifications">Certifications</a>
-						</li>
-						<li>
-							<a href="#Skills">Skills</a>
-						</li>
-						<li>
-							<a href="#Contact">Contact</a>
-						</li>
-					</ul>
-				</nav>
+				<Navbar />	
 				<div className="relative bg-primary text-white p-4 w-220 h-[45rem] shrink-0 rounded-[3.2rem]">
 					<h1 className="absolute text-[7.56rem] leading-[138%] font-arabic font-bold text-secondary top-[3.20rem] right-[3.7rem] text-right">
 						أديب <br />
