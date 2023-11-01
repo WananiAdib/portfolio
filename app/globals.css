@@ -4,7 +4,8 @@
 @import url('https://fonts.googleapis.com/css?family=Tajawal');
 
 .try {
-    filter: drop-shadow(0 0 150px rgba(255, 255, 255, 0.25))
+    filter: drop-shadow(0 0 150px rgba(255, 255, 255, 0.25));
+    transform: translateZ(0);
 }
 .text-shadow {
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.27);
