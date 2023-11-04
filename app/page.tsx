@@ -43,7 +43,7 @@ const Home = () => {
 					Contact
 				</h2>
 				<Contact />
-				<footer className="bg-primary text-white py-2 mt-12 w-full text-center">
+				<footer className="bg-primary text-white py-2 mt-12 min-w-[20rem] w-full px-6 text-center">
 					<small className="text-white mb-4 block">
 						&copy; Adib El Ounani 2023. All rights reserved.
 					</small>

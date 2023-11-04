@@ -33,7 +33,7 @@ const Skills = () => {
 		"Passport",
 	];
 	return (
-		<div className="w-220 flex flex-wrap">
+		<div className="lg:w-220 w-[20rem] flex flex-wrap">
 			{technicalSkills.map((skill, index) => (
 				<span key={index} className="skill">
 					{skill}
