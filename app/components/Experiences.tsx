@@ -37,7 +37,7 @@ const Experiences = () => {
 						</li>
 						<li>
 							Contributed to industry-standard security and privacy features in
-							HumanID's login SDK.
+							HumanID&apos;s login SDK.
 						</li>
 						<li>
 							Focused on improving user experiences and security standards during the
@@ -65,7 +65,7 @@ const Experiences = () => {
 					</li>
 					<li>
 						Optimized existing codebases to streamline data processing workflows,
-						enhancing project efficiency and contributing to the project's success
+						enhancing project efficiency and contributing to the project&apos;s success
 					</li>
 				</ul>
 			</div>
