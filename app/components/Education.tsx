@@ -4,24 +4,24 @@ import nyush from '../../public/NYU_Shanghai_Logo.jpg'
 
 const Education = () => {
   return (
-<div className="bg-primary mt-[1rem] w-220 rounded-[3.2rem] flex">
-					<div className="p-[2rem]">
+<div className="bg-primary mt-[1rem] w-[20rem] lg:w-220 rounded-[3.2rem] flex flex-wrap justify-center lg:justify-start">
+					<div className="lg:p-[2rem] px-[2rem] pt-[2rem] w-[16rem]">
 						<Image
 							src={nyush}
 							alt="nyu shanghai"
-							className="w-[12rem] rounded-[3.2rem]"
+							className="rounded-[3.2rem]"
 						/>
 					</div>
-					<div className="text-white pt-[2rem]">
+					<div className="text-white lg:w-[32rem] lg:pt-[2rem] flex flex-col items-center lg:items-start">
 						<h3 className="text-[2rem] font-500">NYU Shanghai</h3>
-						<div className="flex justify-between items-center">
-							<h4 className="text-[1.6rem]">
+						<div className="flex lg:w-[32rem] lg:justify-between lg:flex-row flex-col  items-center">
+							<h4 className="text-[1.6rem] px-[1.5rem] lg:px-0 text-center">
 								B.Sc in Computer Science
 							</h4>
 							<p>Sep &apos;19 - May &apos;23</p>
 						</div>
-						<p className="w-[32rem] pt-[0.4rem]">
-							Study Away Semesters in London and New York (2x){" "}
+						<p className="pt-[0.4rem] px-[1.5rem] pb-[1.5rem] lg:px-0">
+							Study Away Semesters in London and New York (2x)
 							<br />
 							Scholarship & Awards: NYU Pan-Asian Alumni Global
 							Network Scholarship, Shanghai Scholarship U
