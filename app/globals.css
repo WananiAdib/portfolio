@@ -3,26 +3,26 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Tajawal';
-    src: url('https://fonts.googleapis.com/css?family=Tajawal');
+	font-family: 'Tajawal';
+	src: url('https://fonts.googleapis.com/css?family=Tajawal');
 }
 .try {
-    filter: drop-shadow(0 0 150px rgba(255, 255, 255, 0.25));
-    transform: translateZ(0);
+	filter: drop-shadow(0 0 150px rgba(255, 255, 255, 0.25));
+	transform: translateZ(0);
 }
 .text-shadow {
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.27);
+	text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.27);
 }
 .secTitle::before {
-    content: "# ";
-    @apply text-white font-light  ;
+	content: '# ';
+	@apply text-white font-light;
 }
 .secTitle {
-    @apply w-[20rem] text-[2.5rem] mt-[1rem] lg:w-220 lg:mt-[3rem] lg:text-[3rem] font-semibold text-secondary;
+	@apply w-[20rem] text-[2.5rem] mt-[1rem] lg:w-220 lg:mt-[3rem] lg:text-[3rem] font-semibold text-secondary;
 }
 nav li {
-    @apply hover:bg-secondary hover:text-primary hover:font-semibold rounded-[3.2rem] px-[0.62rem] ;
+	@apply hover:bg-secondary hover:text-primary hover:font-semibold rounded-[3.2rem] px-[0.62rem];
 }
 .skill {
-    @apply bg-primary rounded-[3.2rem] px-[1rem] py-[1rem] text-white mb-[0.3rem] mr-[0.4rem] text-[1.2rem] font-medium;
+	@apply bg-primary rounded-[3.2rem] px-[1rem] py-[1rem] text-white mb-[0.3rem] mr-[0.4rem] text-[1.2rem] font-medium;
 }

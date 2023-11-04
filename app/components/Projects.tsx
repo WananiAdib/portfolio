@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import darettibaaLogo from "../../public/darettibaa logo.png";
+import React from 'react'
+import Image from 'next/image'
+import darettibaaLogo from '../../public/darettibaa logo.png'
 
 const Projects = () => {
 	return (
@@ -19,15 +19,15 @@ const Projects = () => {
 					</h3>
 				</a>
 				<p className="text-white lg:w-[32rem] lg:pt-[0.4rem] px-[1.5rem] pb-[1.5rem] lg:p-0 text-center lg:text-start">
-					Darettibaa is a user-friendly web application designed to
-					assist individuals in effortlessly typing in Arabic. With
-					its intuitive interface and convenient features, users can
-					seamlessly express themselves in the Arabic language,
-					whether for personal communication or professional purposes.
+					Darettibaa is a user-friendly web application designed to assist
+					individuals in effortlessly typing in Arabic. With its intuitive interface
+					and convenient features, users can seamlessly express themselves in the
+					Arabic language, whether for personal communication or professional
+					purposes.
 				</p>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default Projects;
+export default Projects
