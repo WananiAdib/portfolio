@@ -11,7 +11,7 @@ type WorkExperience = {
   title: string
   start: string
   end: string
-  link: string
+  // link: string
   id: string
 }
 
@@ -49,27 +49,27 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    company: 'Kaedim',
+    title: 'Full Stack Engineer',
+    start: '2023',
+    end: '2024',
+    // link: 'https://ibelick.com',
     id: 'work1',
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
+    company: 'Blacty',
+    title: 'Software Engineer',
+    start: '2024',
     end: '2024',
-    link: 'https://ibelick.com',
+    // link: 'https://ibelick.com',
     id: 'work2',
   },
   {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
+    company: 'Nolana AI',
+    title: 'Full Stack Engineer',
+    start: '2025',
     end: 'Present',
-    link: 'https://ibelick.com',
+    // link: 'https://ibelick.com',
     id: 'work3',
   },
 ]
@@ -100,19 +100,15 @@ export const BLOG_POSTS: BlogPost[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
+    link: 'https://github.com/WananiAdib',
   },
   {
     label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    link: 'https://twitter.com/adibdeving',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
-  },
-  {
-    label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    link: 'https://www.linkedin.com/in/adib-el-ounani',
   },
 ]
 
