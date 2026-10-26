@@ -68,9 +68,16 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     company: 'Nolana AI',
     title: 'Full Stack Engineer',
     start: '2025',
-    end: 'Present',
+    end: 'Jul 2026',
     // link: 'https://ibelick.com',
     id: 'work3',
+  },
+  {
+    company: 'Ylookup',
+    title: 'AI Engineer',
+    start: 'Jul 2026',
+    end: 'Present',
+    id: 'work4',
   },
 ]
 
