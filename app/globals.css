@@ -19,3 +19,59 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
+
+@layer base {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  :target {
+    scroll-margin-top: 2rem;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  left: 1rem;
+  transform: translateY(-200%);
+  border-radius: 0.5rem;
+  background: white;
+  color: black;
+  padding: 0.75rem 1rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Content is visible in HTML, even before JavaScript loads or when it is disabled. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-section {
+    animation: reveal-section 300ms ease-out;
+  }
+
+  @keyframes reveal-section {
+    from {
+      transform: translateY(8px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

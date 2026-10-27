@@ -5,6 +5,7 @@ import {
   motion,
   useMotionValue,
   useSpring,
+  useReducedMotion,
   type SpringOptions,
 } from 'motion/react'
 
@@ -25,6 +26,7 @@ export function Magnetic({
   actionArea = 'self',
   springOptions = SPRING_CONFIG,
 }: MagneticProps) {
+  const reducedMotion = useReducedMotion()
   const [isHovered, setIsHovered] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -35,6 +37,11 @@ export function Magnetic({
   const springY = useSpring(y, springOptions)
 
   useEffect(() => {
+    if (reducedMotion) {
+      x.set(0)
+      y.set(0)
+      return
+    }
     const calculateDistance = (e: MouseEvent) => {
       if (ref.current) {
         const rect = ref.current.getBoundingClientRect()
@@ -61,7 +68,7 @@ export function Magnetic({
     return () => {
       document.removeEventListener('mousemove', calculateDistance)
     }
-  }, [ref, isHovered, intensity, range])
+  }, [isHovered, intensity, range, reducedMotion, x, y])
 
   useEffect(() => {
     if (actionArea === 'parent' && ref.current?.parentElement) {
