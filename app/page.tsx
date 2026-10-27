@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
+import { ContactActions } from '@/components/contact-actions'
 import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
@@ -252,9 +253,16 @@ export default function Personal() {
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me at wananiadib[at]gmail[.]com
+          Feel free to contact me at{' '}
+          <a
+            className="break-all underline underline-offset-4"
+            href={`mailto:${EMAIL}`}
+          >
+            {EMAIL}
+          </a>
         </p>
-        <div className="flex items-center justify-start space-x-3">
+        <ContactActions />
+        <div className="flex flex-wrap items-center justify-start gap-3">
           {SOCIAL_LINKS.map((link) => (
             <MagneticSocialLink key={link.label} link={link.link}>
               {link.label}
