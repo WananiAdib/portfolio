@@ -1,9 +1,11 @@
 import { ImageResponse } from 'next/og'
-import { SITE_NAME } from '@/lib/site'
+import { SITE_NAME, SITE_SOCIAL_IMAGE } from '@/lib/site'
 
-export const alt =
-  'Adib El Ounani — Software engineer and NYU Shanghai graduate'
-export const size = { width: 1200, height: 630 }
+export const alt = SITE_SOCIAL_IMAGE.alt
+export const size = {
+  width: SITE_SOCIAL_IMAGE.width,
+  height: SITE_SOCIAL_IMAGE.height,
+}
 export const contentType = 'image/png'
 
 export default function OpenGraphImage() {

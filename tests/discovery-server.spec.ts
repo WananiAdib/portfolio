@@ -54,6 +54,20 @@ test('robots and sitemap use the established domain and only real public pages',
   expect(xml).not.toMatch(/\/blog|\/private|nim-fawn/)
 })
 
+test('CV exposes the shared Open Graph card with its own page URL', async ({
+  request,
+}) => {
+  const cv = await (await request.get('/cv')).text()
+  expect(cv).toContain(`property="og:url" content="${site}/cv"`)
+  expect(cv).toContain(`property="og:image" content="${site}/opengraph-image"`)
+  expect(cv).toContain('property="og:image:width" content="1200"')
+  expect(cv).toContain('property="og:image:height" content="630"')
+  expect(cv).toContain(
+    'property="og:image:alt" content="Adib El Ounani — Software engineer and NYU Shanghai graduate"',
+  )
+  expect(cv).toContain('property="og:site_name" content="Adib El Ounani"')
+})
+
 test('CV has a distinct canonical and template sample is not indexed', async ({
   request,
 }) => {

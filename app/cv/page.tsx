@@ -2,12 +2,20 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { EMAIL, SOCIAL_LINKS, WORK_EXPERIENCE } from '@/app/data'
 import { PrintButton } from '@/components/print-button'
+import { SITE_NAME, SITE_SOCIAL_IMAGE } from '@/lib/site'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: 'CV',
   alternates: { canonical: '/cv' },
-  openGraph: { title: 'CV — Adib El Ounani', url: '/cv' },
+  openGraph: {
+    title: 'CV — Adib El Ounani',
+    description: 'Work experience and contact details for Adib El Ounani.',
+    url: '/cv',
+    siteName: SITE_NAME,
+    type: 'website',
+    images: [SITE_SOCIAL_IMAGE],
+  },
   description: 'Work experience and contact details for Adib El Ounani.',
 }
 
