@@ -4,17 +4,49 @@ import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
+import { WEBSITE_URL } from '@/lib/constants'
+import { SITE_NAME, SITE_DESCRIPTION } from '@/lib/site'
+import { SOCIAL_LINKS } from './data'
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#ffffff',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#09090b' },
+  ],
 }
 
 export const metadata: Metadata = {
-  title: 'Nim - Personal website template',
-  description:
-    'Nim is a free and open-source personal website template built with Next.js 15, React 19 and Motion-Primitives.',
+  metadataBase: new URL(WEBSITE_URL),
+  title: {
+    default: `${SITE_NAME} — Software Engineer`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  alternates: { canonical: '/' },
+  authors: [{ name: SITE_NAME, url: WEBSITE_URL }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: WEBSITE_URL,
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} — Software Engineer`,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${SITE_NAME} — Software Engineer`,
+    description: SITE_DESCRIPTION,
+  },
+}
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: SITE_NAME,
+  url: WEBSITE_URL,
+  sameAs: SOCIAL_LINKS.map(({ link }) => link),
 }
 
 const geist = Geist({
@@ -37,6 +69,12 @@ export default function RootLayout({
       <body
         className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(person).replace(/</g, '\\u003c'),
+          }}
+        />
         <ThemeProvider
           enableSystem={true}
           attribute="class"
