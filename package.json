@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
-    "test:logic": "playwright test contact-logic.spec.ts accessibility-server.spec.ts"
+    "test:logic": "playwright test contact-logic.spec.ts accessibility-server.spec.ts discovery-server.spec.ts"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",

@@ -5,7 +5,9 @@ import { PrintButton } from '@/components/print-button'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'CV — Adib El Ounani',
+  title: 'CV',
+  alternates: { canonical: '/cv' },
+  openGraph: { title: 'CV — Adib El Ounani', url: '/cv' },
   description: 'Work experience and contact details for Adib El Ounani.',
 }
 
