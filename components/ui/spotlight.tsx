@@ -1,6 +1,12 @@
 'use client'
 import React, { useRef, useState, useCallback, useEffect } from 'react'
-import { motion, useSpring, useTransform, SpringOptions } from 'motion/react'
+import {
+  motion,
+  useSpring,
+  useTransform,
+  SpringOptions,
+  useReducedMotion,
+} from 'motion/react'
 import { cn } from '@/lib/utils'
 
 export type SpotlightProps = {
@@ -14,6 +20,7 @@ export function Spotlight({
   size = 200,
   springOptions = { bounce: 0 },
 }: SpotlightProps) {
+  const reducedMotion = useReducedMotion()
   const containerRef = useRef<HTMLDivElement>(null)
   const [isHovered, setIsHovered] = useState(false)
   const [parentElement, setParentElement] = useState<HTMLElement | null>(null)
@@ -46,26 +53,29 @@ export function Spotlight({
   )
 
   useEffect(() => {
-    if (!parentElement) return
+    if (!parentElement || reducedMotion) return
 
+    const enter = () => setIsHovered(true)
+    const leave = () => setIsHovered(false)
     parentElement.addEventListener('mousemove', handleMouseMove)
-    parentElement.addEventListener('mouseenter', () => setIsHovered(true))
-    parentElement.addEventListener('mouseleave', () => setIsHovered(false))
+    parentElement.addEventListener('mouseenter', enter)
+    parentElement.addEventListener('mouseleave', leave)
 
     return () => {
       parentElement.removeEventListener('mousemove', handleMouseMove)
-      parentElement.removeEventListener('mouseenter', () => setIsHovered(true))
-      parentElement.removeEventListener('mouseleave', () => setIsHovered(false))
+      parentElement.removeEventListener('mouseenter', enter)
+      parentElement.removeEventListener('mouseleave', leave)
     }
-  }, [parentElement, handleMouseMove])
+  }, [parentElement, handleMouseMove, reducedMotion])
 
   return (
     <motion.div
       ref={containerRef}
+      aria-hidden="true"
       className={cn(
         'pointer-events-none absolute rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops),transparent_80%)] blur-xl transition-opacity duration-200',
         'from-zinc-50 via-zinc-100 to-zinc-200',
-        isHovered ? 'opacity-100' : 'opacity-0',
+        isHovered && !reducedMotion ? 'opacity-100' : 'opacity-0',
         className,
       )}
       style={{
