@@ -1,0 +1,42 @@
+@media print {
+  @page {
+    margin: 16mm;
+  }
+
+  :global(body):has(.cv) {
+    background: white !important;
+    color: black !important;
+  }
+
+  :global(body):has(.cv) :global(header),
+  :global(body):has(.cv) :global(footer),
+  :global(body):has(.cv) :global(nav),
+  :global(body):has(.cv) :global(.skip-link) {
+    display: none !important;
+  }
+
+  :global(body):has(.cv) > :global(div),
+  :global(body):has(.cv) > :global(div) > :global(div) {
+    padding: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+  }
+
+  .cv,
+  .cv * {
+    color: black !important;
+    opacity: 1 !important;
+  }
+
+  .cv {
+    font-size: 11pt;
+  }
+
+  .cv a {
+    text-decoration: none;
+  }
+
+  .job {
+    break-inside: avoid;
+  }
+}
