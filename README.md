@@ -1,42 +1,55 @@
-<img src="/public/cover.jpg" alt="Cover image representing Nim, a personal website template" width="100%" />
+# Adib El Ounani
 
-Nim is a free and open-source personal website template built with Next.js 15, React 19, Tailwind CSS v4, and Motion. Designed for developers, designers, and founders, it combines minimalism with delightful animated components powered by [Motion-Primitives](https://motion-primitives.com).
+Personal portfolio built with Next.js, React, Tailwind CSS, and MDX. The homepage uses a Quiet index layout with the original Cut seal identity, a small project list, experience, and a Writing section ready for future posts.
 
-Live demo: [https://nim-fawn.vercel.app](https://nim-fawn.vercel.app)
+## Development
 
-## Features
-
-- Minimal one-page portfolio layout.
-- Blog support with MDX.
-- Responsive and accessible design.
-- Easy to use
-- [Motion-Primitives](https://motion-primitives.com) for animated components.
-
-## Getting Started
-
-For detailed setup instructions, refer to the [Installation Guide](./INSTALLATION.md).
-
-```bash
-git clone https://github.com/ibelick/nim.git
-cd nim
-npm install
+```sh
+npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Run `npx tsc --noEmit` for type checking and `npm run build` for a production build.
 
-## Contributing
+## Add projects
 
-Contributions are welcome! Feel free to open issues or submit pull requests to improve Nim.
+Edit `PROJECTS` in `app/data.ts`. SolveAgain is the first entry, linked to https://solveagain.com and marked “In progress”. Add new entries as you work on them:
+
+```ts
+{
+  id: 'my-project',
+  name: 'My project',
+  link: 'https://example.com',
+  status: 'In progress', // optional
+  description: 'What it does.', // optional
+}
+```
+
+## Publish writing
+
+`BLOG_POSTS` starts empty. The homepage shows “Coming soon.” until a post is ready. The template's demonstration article has been removed; the MDX setup and article layout remain available.
+
+Create `app/blog/<slug>/page.mdx`, then add a matching entry to `BLOG_POSTS` in `app/data.ts`:
+
+```ts
+{
+  uid: 'my-first-post',
+  title: 'My first post',
+  description: 'A short introduction.',
+  link: '/blog/my-first-post',
+}
+```
+
+Experience, social links, and the contact email also live in `app/data.ts`.
+
+## Identity
+
+`components/cut-seal.tsx` renders the approved 23×17 Cut seal as native HTML/CSS grid runs. The negative space spells **أديب الوناني**. It inherits the current text color for light and dark themes, with no image or font dependency for the mark. `app/icon.svg` supplies the matching browser icon.
 
 ## Deployment
 
-The personal deployment uses Coolify's Dockerfile build pack, container port 3000, and no published host port. The apex domain `wananiadib.com` and `www.wananiadib.com` route through its HTTPS proxy. Configure the internal health check at `/` using host `127.0.0.1`. The public portfolio is separate from the password-protected Tifin reader.
+The Coolify deployment uses the Dockerfile, container port 3000, and no published host port. `wananiadib.com` and `www.wananiadib.com` route through the HTTPS proxy. The health check uses `/` on `127.0.0.1`. The public portfolio is separate from the private Tifin reader.
 
-You can deploy your site to any hosting platform that supports Next.js. For the easiest deployment experience, consider using Vercel:
+## Credits
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fibelick%2Fnim&env=NEXT_PUBLIC_SITE_URL&project-name=nim&repository-name=nim&redirect-url=https%3A%2F%2Ftwitter.com%2Fibelick&demo-title=Nim&demo-description=Nim%20is%20a%20free%20and%20open-source%20minimal%20personal%20website%20template%20built%20with%20Next.js%2015%2C%20React%2019%2C%20and%20Motion-Primitives.&demo-url=https%3A%2F%2Fnim.vercel.app&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fibelick%2Fnim%2Frefs%2Fheads%2Fmain%2F.github%2Fassets%2Freadme.png&teamSlug=ibelick)
-
-## About
-
-Nim is designed to make personal branding effortless and beautiful. If you enjoy it, consider sharing it and exploring [Motion-Primitives Pro](https://pro.motion-primitives.com/).
+Based on [Nim by Ibelick](https://github.com/ibelick/nim), with [Motion-Primitives](https://motion-primitives.com).
