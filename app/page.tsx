@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import {
   BLOG_POSTS,
-  EMAIL,
+  OBFUSCATED_EMAIL,
   PROJECTS,
   SOCIAL_LINKS,
   WORK_EXPERIENCE,
@@ -90,11 +90,9 @@ export default function Personal() {
                   </a>
                 </li>
               ))}
-              <li>
-                <a href={`mailto:${EMAIL}`}>
-                  Email
-                  <ArrowUpRight size={12} aria-hidden="true" />
-                </a>
+              <li className={styles.email}>
+                <span>Email</span>
+                <span className={styles.emailAddress}>{OBFUSCATED_EMAIL}</span>
               </li>
             </ul>
           </section>

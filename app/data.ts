@@ -30,7 +30,7 @@ type SocialLink = {
 export const PROJECTS: Project[] = [
   {
     name: 'SolveAgain',
-    link: 'https://solveagain.com',
+    link: 'https://cadence.wananiadib.com',
     status: 'In progress',
     id: 'solveagain',
   },
@@ -88,4 +88,5 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ]
 
-export const EMAIL = 'wananiadib@gmail.com'
+// Keep the contact address obfuscated in rendered HTML and page data.
+export const OBFUSCATED_EMAIL = 'wananiadib[at]gmail[.]com'
