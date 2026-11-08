@@ -30,7 +30,7 @@ type SocialLink = {
 export const PROJECTS: Project[] = [
   {
     name: 'SolveAgain',
-    link: 'https://solveagain.com',
+    link: 'https://cadence.wananiadib.com',
     status: 'In progress',
     id: 'solveagain',
   },

@@ -13,7 +13,7 @@ Open http://localhost:3000. Run `npx tsc --noEmit` for type checking and `npm ru
 
 ## Add projects
 
-Edit `PROJECTS` in `app/data.ts`. SolveAgain is the first entry, linked to https://solveagain.com and marked “In progress”. Add new entries as you work on them:
+Edit `PROJECTS` in `app/data.ts`. SolveAgain is the first entry, linked to https://cadence.wananiadib.com and marked “In progress”. Add new entries as you work on them:
 
 ```ts
 {
