@@ -137,6 +137,16 @@
   gap: 4px;
   min-height: 24px;
 }
+.email {
+  display: grid;
+  gap: 4px;
+  padding-top: 4px;
+}
+.emailAddress {
+  color: var(--index-muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
 .background {
   color: var(--index-muted);
   font-size: 13px;

@@ -41,6 +41,7 @@ Create `app/blog/<slug>/page.mdx`, then add a matching entry to `BLOG_POSTS` in 
 ```
 
 Experience, social links, and the contact email also live in `app/data.ts`.
+Keep `OBFUSCATED_EMAIL` in its `[at]` / `[.]` format and render it as plain text, without a `mailto:` link or a decoded address in page data.
 
 ## Identity
 
