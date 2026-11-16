@@ -51,6 +51,26 @@ Keep `OBFUSCATED_EMAIL` in its `[at]` / `[.]` format and render it as plain text
 
 The Coolify deployment uses the Dockerfile, container port 3000, and no published host port. `wananiadib.com` and `www.wananiadib.com` route through the HTTPS proxy. The health check uses `/` on `127.0.0.1`. The public portfolio is separate from the private Tifin reader.
 
+## PostHog
+
+Set `NEXT_PUBLIC_POSTHOG_KEY` to the public project key from PostHog settings.
+Set `NEXT_PUBLIC_POSTHOG_HOST` to `https://eu.i.posthog.com` (default) or
+`https://us.i.posthog.com`, to match the project's region. For local use, copy
+`.env.example` to `.env.local` and add the key. With no key, analytics stays off.
+
+In Coolify, enable **Build Variable** for both values before rebuilding. The
+Dockerfile passes them to `next build`; runtime-only values cannot change the
+browser bundle. This is a public ingestion key, never a PostHog personal API key.
+
+PostHog captures page views, client-side navigation, page leaves, and automatic
+interaction events. Session recording is disabled. Browser requests use
+`/ingest`; Next.js rewrites route static assets and remote config to the matching
+PostHog asset host and events to the ingestion host. See the
+[PostHog rewrite guide](https://posthog.com/docs/advanced/proxy/nextjs).
+
+After deployment, check that `/ingest` requests return successful responses in
+the browser Network panel and that events appear in the PostHog activity feed.
+
 ## Credits
 
 Based on [Nim by Ibelick](https://github.com/ibelick/nim), with [Motion-Primitives](https://motion-primitives.com).
